@@ -56,13 +56,10 @@ with open(file_name, 'a+') as filehandler:
     filehandler.write(f'timestamp\tcount')
 
 
-today = datetime.date.today()
-today = datetime.datetime(year=today.year, month=today.month, day=today.day)
-yesterday = today - datetime.timedelta(1)
-
-
-
 while True:
+    today = datetime.date.today()
+    today = datetime.datetime(year=today.year, month=today.month, day=today.day)
+    yesterday = today - datetime.timedelta(1)
     with open(file_name, 'a+') as filehandler:
         counts = twclient.get_recent_tweets_count(query=query, end_time=today, start_time=yesterday, granularity='hour')
         for i in counts.data:
