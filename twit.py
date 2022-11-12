@@ -57,11 +57,14 @@ with open(file_name, 'a+') as filehandler:
 
 
 while True:
-    with open(file_name, 'a+') as filehandler:
-        mhsample = twclient.search_recent_tweets(query=query)
-        time = datetime.datetime.now()
-        for i in mhsample.data:
-            i = i.text.replace('\n', '')
-            filehandler.write(f'\n\"{i}\"\t{time}')
+    try:
+        with open(file_name, 'a+') as filehandler:
+            mhsample = twclient.search_recent_tweets(query=query)
+            time = datetime.datetime.now()
+            for i in mhsample.data:
+                i = i.text.replace('\n', '')
+                filehandler.write(f'\n\"{i}\"\t{time}')
+    except:
+        pass
     sleep(120)
 
