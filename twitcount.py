@@ -71,5 +71,5 @@ while True:
                     count = i['tweet_count']
                     filehandler.write(f'\n\"{start}\"\t{count}')
     except:
-        pass
+        print('error')
     sleep(3600)

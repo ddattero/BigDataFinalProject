@@ -65,6 +65,6 @@ while True:
                 i = i.text.replace('\n', '')
                 filehandler.write(f'\n\"{i}\"\t{time}')
     except:
-        pass
+        print('error')
     sleep(120)
 
