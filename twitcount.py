@@ -55,15 +55,21 @@ file_name = 'mental_health_tweet_count.csv'
 with open(file_name, 'a+') as filehandler:
     filehandler.write(f'timestamp\tcount')
 
+last_td = None
 
 while True:
-    today = datetime.date.today()
-    today = datetime.datetime(year=today.year, month=today.month, day=today.day)
-    yesterday = today - datetime.timedelta(1)
-    with open(file_name, 'a+') as filehandler:
-        counts = twclient.get_recent_tweets_count(query=query, end_time=today, start_time=yesterday, granularity='hour')
-        for i in counts.data:
-            start = i['start']
-            count = i['tweet_count']
-            filehandler.write(f'\n\"{start}\"\t{count}')
-    sleep(86400)
+    try:
+        with open(file_name, 'a+') as filehandler:
+            today = datetime.date.today()
+            today = datetime.datetime(year=today.year, month=today.month, day=today.day)
+            yesterday = today - datetime.timedelta(1)
+            if last_td != today:
+                last_td = today
+                counts = twclient.get_recent_tweets_count(query=query, end_time=today, start_time=yesterday, granularity='hour')
+                for i in counts.data:
+                    start = i['start']
+                    count = i['tweet_count']
+                    filehandler.write(f'\n\"{start}\"\t{count}')
+    except:
+        pass
+    sleep(3600)
