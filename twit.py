@@ -66,5 +66,5 @@ while True:
                 filehandler.write(f'\n\"{i}\"\t{time}')
     except:
         print('error')
-    sleep(120)
+    sleep(60)
 
