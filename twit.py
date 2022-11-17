@@ -15,11 +15,11 @@ twclient = tweepy.Client(
 search_terms = [
     'mental health', 
     'depression',
-    'depressed' 
+    'depressed', 
     'anxiety',
-    'anxious' 
+    'anxious', 
     'ADHD', 
-    'attention deficit'
+    'attention deficit',
     'OCD',
     'obsessive-compulsive disorder',
     'PTSD',
