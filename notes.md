@@ -4,8 +4,7 @@
 ### Todo:
 - Sentiment analysis on tweet text
     - already preprocessed
-- Plot number of tweets a key word was in
-- \
+- Make graphs look nice
 
 
 ### Observations
