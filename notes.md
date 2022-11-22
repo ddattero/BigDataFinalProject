@@ -5,8 +5,11 @@
 - Sentiment analysis on tweet text
     - already preprocessed
 - Make graphs look nice
+- group related terms
+- filter out non MH related tweets (ie tropical depression)
 
 
 ### Observations
-- Drastic difference between 4 and 6 workers
-    - Esp with graphing
+- client.persist/compute vs df.persist
+    - client seems faster
+    - does it not use all cores when df. 
