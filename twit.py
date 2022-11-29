@@ -59,7 +59,7 @@ with open(file_name, 'a+') as filehandler:
 while True:
     try:
         with open(file_name, 'a+') as filehandler:
-            mhsample = twclient.search_recent_tweets(query=query)
+            mhsample = twclient.search_recent_tweets(query=query, lang=)
             time = datetime.datetime.now()
             for i in mhsample.data:
                 i = i.text.replace('\n', ' ')
