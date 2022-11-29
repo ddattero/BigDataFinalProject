@@ -5,14 +5,17 @@
 - Sentiment analysis on tweet text
     - already preprocessed
 - Make graphs look nice
-- group related terms
 - filter out non MH related tweets (ie tropical depression)
+- GROUP RELATED TERMS
 
 
 ### Observations
 - client.persist/compute vs df.persist
     - client seems faster
     - does it not use all cores when df. 
+- Computing mean of pol and sub of categories
+    - Without persist: 9 mins
+    - With persist: < 1min
 
 ### Future Improvements
 - Translate tweets when they are pulled, or filter by language
