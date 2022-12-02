@@ -16,6 +16,8 @@
 - Computing mean of pol and sub of categories
     - Without persist: 9 mins
     - With persist: < 1min
+- Time to pre process dataset 6 workers
+    - 22m 59.8s
 
 ### Future Improvements
 - Translate tweets when they are pulled, or filter by language
