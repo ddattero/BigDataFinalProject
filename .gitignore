@@ -4,10 +4,3 @@ Dask Intro.ipynb
 dask-worker-space/
 Data/
 figures/
-__pycache__/
-mental_health_tweets.csv
-mental_health_tweet_count.csv
-pulltweets.sh
-pushcode.sh
-mental_health_tweets_preprocessed_en.parquet/
-config.py
