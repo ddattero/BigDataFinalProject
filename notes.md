@@ -6,6 +6,7 @@
     - already preprocessed
 - Make graphs look nice
 - filter out non MH related tweets (ie tropical depression)
+- count pos and neg sentiment among cats
 - GROUP RELATED TERMS
 
 
