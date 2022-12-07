@@ -2,8 +2,7 @@
 ## Mental Health Discussion on Twitter
 
 ### Todo:
-- Sentiment analysis on tweet text
-    - already preprocessed
+
 - Make graphs look nice
 - filter out non MH related tweets (ie tropical depression)
 - count pos and neg sentiment among cats
@@ -30,3 +29,13 @@
 - Subjectivity over time
 - polarity vs subjectivity
 - avg subjectivity and polarity for each key word
+
+### Problems
+- Tweets that contain keywords but are not about MH are included (ie tropical depression)
+- Sentiment analysis is not very accurate
+- Twitter Essential API does not include a language filter
+
+### Questions
+- How should I create the diagram?
+- Is current code too simplistic?
+- Is research presentation format ok, or should I change it to be more of a business presentation?
